@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (min-width: 1020px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full top-52 bg-softBlue;
+  }
+  .bg-tabs {
+    width: 2000px;
+    height: 300px;
+    right: 60%;
+    @apply absolute rounded-r-full top-60 bg-softBlue;
+  }
+}
+
+.ficon:hover {
+  filter: invert(53%) sepia(38%) saturate(3303%) hue-rotate(326deg)
+    brightness(101%) contrast(96%);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed; //  make the cross button stay in the same position when you scrolling down
+  top: 50px;
+  right: 25px;
+}
+
+.open .top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: #fff;
+}
+
+.open .middle {
+  display: none;
+}
+
+.open .bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: #fff;
+}
+
+.trans {
+  @apply transition-opacity duration-500 opacity-70;
+}
